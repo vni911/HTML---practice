@@ -1,0 +1,16 @@
+<!DOCTYPE>
+<"UTF=8">
+<head>
+<script>
+document.wirte("script 안에 jscode 주입, 동적시작,")
+document.wirte(1+1은 2로)
+<script>
+</head>
+<body>
+<input type="button" value="버튼" onclick="alert('type 종류 ,ref - "https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input"')"
+<input type="button" value="설명", onclick="alert('value는 이름 지정, onlick은 말그대로 ontaget상태에서 alert경고 메세지 남김, 여기서 on은 js의 event에 해당 ')">
+
+</body>
+
+js - studying
+https://opentutorials.org/module/3180/18869
