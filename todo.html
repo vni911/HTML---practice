@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<div class="clock">
-    <span class="show-hr"></span> :
-    <span class="show-min"></span> :
-    <span class="show-sec"></span>
 
-</div>
 <body>
     <button class="stop">STOP</button>
+    <div class="clock">
+        <span class="show-hr"></span> :
+        <span class="show-min"></span> :
+        <span class="show-sec"></span>
+    </div>
     <script>
-        let stop = document.querySelector('.stop');
-        stop.addEventListener('click',function(){
-            clearInterval(t);
-        });
+        setInterval(function(){
+
         let now = new Date();
 
         console.log(now);
@@ -35,6 +33,8 @@
             showHr.innerText = hr;
             showMin.innerText = min;
             showSec.innerText = sec;
+        },500);
+        
     </script>
 </body>
 </html>
