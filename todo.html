@@ -9,6 +9,7 @@
 <body>
     <button class="stop">STOP</button>
     <div class="clock">
+        <p class="show-state">오전</p>
         <span class="show-hr"></span> :
         <span class="show-min"></span> :
         <span class="show-sec"></span>
@@ -29,10 +30,37 @@
         let showHr = document.querySelector('.show-hr'),
             showMin = document.querySelector('.show-min'),
             showSec = document.querySelector('.show-sec');
+            showState = document.querySelector('.show-state');
+
+            if(hr >= 0 && hr <=11){
+                showState.innerText = '오전';
+                if(hr === 0){
+                    hr  =12;
+                }
+
+            }else {
+                showState.innerText = '오후';
+                if(hr > 12){
+                    hr = hr-12;
+                }
+            }
+
+            
+            if(hr < 10 ) {
+                hr = '0'+ hr;
+            }
+            if(min < 10 ) {
+                min = '0'+ min;
+            }
+            if(sec < 10 ) {
+                sec = '0'+ sec;
+            }
 
             showHr.innerText = hr;
             showMin.innerText = min;
             showSec.innerText = sec;
+
+         
         },500);
         
     </script>
