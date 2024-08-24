@@ -14,7 +14,34 @@
         <span class="show-min"></span> :
         <span class="show-sec"></span>
     </div>
+
+    <div class="date">
+        <span class="show-year"></span>년
+        <span class="show-mon"></span>월
+        <span class="show-date"></span>일
+        <span class="show-day"></span>요일
+    </div>
     <script>
+
+        let dateInfo = new Date();
+        
+        let nowYear = dateInfo.getFullYear(),
+            nowMon = dateInfo.getMonth(),
+            nowDate = dateInfo.getDate(),
+            nowDay = dateInfo.getDay();
+        let showYear = document.querySelector('.show-year'),
+            showMon = document.querySelector('.show-mon'),
+            showDate = document.querySelector('.show-date'),
+            showDay = document.querySelector('.show-day');
+
+        let days = ['일','월','화','수','목','금','토']
+
+            showYear.innerText = nowYear;
+            showMon.innerText = nowMon;
+            showDate.innerText = nowDate;
+            showDay.innerText = days[nowDay];
+        
+
         setInterval(function(){
 
         let now = new Date();
