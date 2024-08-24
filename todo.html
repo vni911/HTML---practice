@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div class="clock">
+    <span class="show-hr"></span> :
+    <span class="show-min"></span> :
+    <span class="show-sec"></span>
+
+</div>
+<body>
+    <button class="stop">STOP</button>
+    <script>
+        let stop = document.querySelector('.stop');
+        stop.addEventListener('click',function(){
+            clearInterval(t);
+        });
+        let now = new Date();
+
+        console.log(now);
+        console.dir(now);
+
+        let hr = now.getHours(),
+            min = now.getMinutes(),
+            sec = now.getSeconds();
+        console.log(hr, min, sec);
+
+        let showHr = document.querySelector('.show-hr'),
+            showMin = document.querySelector('.show-min'),
+            showSec = document.querySelector('.show-sec');
+
+            showHr.innerText = hr;
+            showMin.innerText = min;
+            showSec.innerText = sec;
+    </script>
+</body>
+</html>
